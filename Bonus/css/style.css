@@ -1,0 +1,169 @@
+/* REGOLE DI RESET  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* REGOLE GENERALI */
+.flex {
+    display: flex;
+}
+
+.container1000 {
+    max-width: 1000px;
+    margin:0 auto;
+}
+
+.container1100 {
+    max-width: 1100px;
+    margin:0 auto;
+}
+
+.container1200 {
+    max-width: 1200px;
+    margin:0 auto;
+}
+
+
+.inline-block {
+    display: inline-block;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mt40 {
+    margin-top: 40px;
+}
+
+.mt50 {
+    margin-top: 50px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.mb40 {
+    margin-bottom: 40px;
+}
+
+.mb50 {
+    margin-bottom: 50px;
+}
+
+
+/* Regole header */
+header {
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#play-button {
+    padding: 0.3rem 1.5rem;
+}
+
+/* Regole main */
+main {
+    width: 100%;
+    height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: aquamarine;
+}
+
+/* Regole griglia */
+.grid-container {
+    width: 70vh;
+    height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-container .grid-cell {
+    border: 2px solid white;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container .grid-cell.easy-level {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+.grid-container .grid-cell.medium-level {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+.grid-container .grid-cell.hard-level {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+}
+
+.grid-container  .grid-cell.clicked {
+    background-color: lightblue;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+}
+
+.grid-container  .grid-cell.clicked.bomb {
+    background-color: red;
+}
+
+.lose {
+    width: 200px;
+    height: 150px;
+    background-color: white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+}
+
+.lose button {
+    margin-left: 25px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+#punteggio {
+    font: 1.5rem;
+    color: red;
+    margin-top: 20px;
+}
+
+.d-none {
+    display: none;
+}
