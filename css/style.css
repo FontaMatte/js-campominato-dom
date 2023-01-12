@@ -92,6 +92,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: aquamarine;
 }
 
@@ -138,4 +139,31 @@ footer {
 
 .grid-container  .grid-cell.clicked.bomb {
     background-color: red;
+}
+
+.lose {
+    width: 200px;
+    height: 150px;
+    background-color: white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+}
+
+.lose button {
+    margin-left: 25px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+#punteggio {
+    font: 1.5rem;
+    color: red;
+    margin-top: 20px;
+}
+
+.d-none {
+    display: none;
 }

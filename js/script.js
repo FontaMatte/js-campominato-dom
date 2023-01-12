@@ -2,6 +2,10 @@
 let gridContainer = document.querySelector('.grid-container');
 const playButton = document.querySelector('#play-button');
 const level = document.querySelector('#level');
+const restartButton = document.querySelector('#restart-button');
+const youLose = document.querySelector('.lose');
+const punteggio = document.querySelector('#punteggio');
+let counter = 1; //conatore click effettuati
 
 const numeriGenerati = [];
 
@@ -47,21 +51,19 @@ function cellGeneratorEasy () {
             
             function() {
 
-                let counter = 0;
-
                 if (!this.classList.contains('clicked')) {
                     this.classList.add('clicked');
+
+                    punteggio.innerHTML = `PUNTEGGIO: ${counter}`;
+                    counter = counter + 1;
                 }
 
                 for (let i = 0; i < numeriGenerati.length; i++) {
                     if (numeriGenerati[i] == this.innerText) {
                         gridCell.classList.add('bomb');
-                        // alert('hai perso');
+                        youLose.classList.remove('d-none');
                     }
                 }
-
-                counter += 1;
-                console.log(counter);
 
                 if (counter == 84) {
                     alert('complimenti, hai vinto!!');
@@ -137,6 +139,16 @@ for (let j = 1; j <= 16 ; j++) {
         console.log(numeriGenerati);
 }
 
+
+restartButton.addEventListener('click',
+    function() {
+        gridContainer.innerHTML = '';
+        youLose.classList.add('d-none');
+        cellGeneratorEasy();
+        counter = 0;
+        punteggio.innerHTML = `PUNTEGGIO: ${counter}`;
+    }
+)
 
 
 function getRandomNumber1(min, max, amount) {
